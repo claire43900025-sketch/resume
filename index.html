@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>張雅婷 Claire Chang | 個人履歷 & 品牌公關接待專員</title>
+  <meta name="description" content="張雅婷 Claire Chang - 專業品牌公關接待專員 / VIP客戶關係管理 / 品酒文化與美學">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+TC:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            earth: {
+              50: '#FAF8F5',
+              100: '#F3EFEA',
+              200: '#E6DDD4',
+              300: '#D5C4B4',
+              400: '#BD9B82',
+              500: '#A37759',
+              600: '#8A5D40',
+              700: '#714831',
+              800: '#533524',
+              900: '#382318',
+            },
+            sage: {
+              50: '#F4F6F4',
+              100: '#E3E8E3',
+              200: '#C7D2C7',
+              500: '#6B8268',
+              700: '#465744',
+            },
+            clay: '#A3623B',
+            sand: '#F7F4EE',
+            charcoal: '#282421',
+            warmgray: '#6B645C'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', '"Noto Serif TC"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans TC"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF8F5;
+      color: #282421;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .font-title {
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
+    }
+
+    .earth-pattern {
+      background-color: #FAF8F5;
+      background-image: radial-gradient(#D5C4B4 0.75px, transparent 0.75px), radial-gradient(#D5C4B4 0.75px, #FAF8F5 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(213, 196, 180, 0.4);
+    }
+
+    /* Print Stylesheet for PDF generation */
+    @media print {
+      body {
+        background-color: #FFFFFF !important;
+        background-image: none !important;
+        color: #000000 !important;
+      }
+      .no-print, header, nav, footer, #toast {
+        display: none !important;
+      }
+      .glass-card {
+        background: #FFFFFF !important;
+        border: 1px solid #D5C4B4 !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      section {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body class="selection:bg-earth-200 selection:text-earth-900">
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-charcoal text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-sm font-medium">
+    <i class="fa-solid fa-circle-check text-sage-200"></i>
+    <span id="toast-text">已複製到剪貼簿</span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="no-print fixed top-0 left-0 right-0 z-40 bg-earth-50/80 backdrop-blur-md border-b border-earth-200/50">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#hero" class="group flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-earth-200 flex items-center justify-center text-earth-800 font-serif font-bold text-lg group-hover:bg-earth-300 transition-colors">
+          C
+        </div>
+        <div>
+          <span class="font-title text-xl font-bold tracking-wider text-charcoal block">張雅婷</span>
+          <span class="text-xs uppercase tracking-widest text-earth-500 font-medium">Claire Chang</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-warmgray">
+        <a href="#about" class="hover:text-clay transition-colors">關於我</a>
+        <a href="#skills" class="hover:text-clay transition-colors">核心專長</a>
+        <a href="#experience" class="hover:text-clay transition-colors">工作經歷</a>
+        <a href="#education" class="hover:text-clay transition-colors">學歷背景</a>
+        <a href="#contact" class="hover:text-clay transition-colors">聯絡資訊</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button onclick="window.print()" class="flex items-center gap-2 px-4 py-2 rounded-full border border-earth-300 text-earth-800 hover:bg-earth-100 hover:border-earth-400 text-sm font-medium transition-all shadow-sm">
+          <i class="fa-solid fa-file-pdf text-clay"></i>
+          <span>下載 / 列印履歷</span>
+        </button>
+        <a href="mailto:claire43900025@gmail.com" class="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-clay text-white hover:bg-earth-600 text-sm font-medium transition-all shadow-sm shadow-clay/20">
+          <i class="fa-regular fa-envelope"></i>
+          <span>聯絡我</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24">
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center py-20 px-6 overflow-hidden">
+      <!-- Decorative Earth-tone Blobs -->
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-earth-200/50 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -right-24 w-96 h-96 bg-sage-100/60 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 left-1/3 w-80 h-80 bg-clay/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <!-- Tag -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-earth-100/90 border border-earth-300/60 text-earth-700 text-xs tracking-widest uppercase mb-6 font-medium">
+          <span class="w-2 h-2 rounded-full bg-clay animate-pulse"></span>
+          PR & VIP Relations Specialist
+        </div>
+
+        <!-- Name & Title -->
+        <h1 class="font-title text-5xl md:text-7xl font-bold tracking-tight text-charcoal mb-4">
+          張 雅 婷
+        </h1>
+        <p class="font-serif italic text-2xl md:text-3xl text-earth-600 mb-6 font-normal">
+          Claire Chang
+        </p>
+
+        <!-- Position & Philosophy -->
+        <p class="text-lg md:text-xl text-warmgray max-w-2xl mx-auto leading-relaxed mb-8">
+          以細膩溫度連結品牌與顧客，將品酒美學、商務社交與公關款待交織為令人深刻的體驗。
+        </p>
+
+        <!-- Key Meta Info Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-10 text-sm text-warmgray">
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/70 border border-earth-200 shadow-sm">
+            <i class="fa-solid fa-location-dot text-clay"></i>
+            <span>台灣桃園 (Taoyuan, TW)</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/70 border border-earth-200 shadow-sm">
+            <i class="fa-solid fa-wine-glass text-clay"></i>
+            <span>品酒文化 & 美學接待</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/70 border border-earth-200 shadow-sm">
+            <i class="fa-solid fa-graduation-cap text-clay"></i>
+            <span>萬能科大 企管系</span>
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="no-print flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-clay text-white hover:bg-earth-600 font-medium text-base transition-all shadow-md shadow-clay/20 flex items-center justify-center gap-2">
+            <i class="fa-regular fa-paper-plane"></i>
+            <span>即刻洽談合作</span>
+          </a>
+          <button onclick="copyEmail()" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white border border-earth-300 text-charcoal hover:bg-earth-50 font-medium text-base transition-all shadow-sm flex items-center justify-center gap-2">
+            <i class="fa-regular fa-copy text-earth-500"></i>
+            <span>複製 Email 地址</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 px-6 bg-earth-100/50 relative">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+          
+          <div class="md:col-span-5 relative">
+            <div class="relative mx-auto max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-earth-200 aspect-[4/5] flex flex-col items-center justify-center p-8 text-center">
+              <!-- Elegant Silhouette / Visual Element -->
+              <div class="w-28 h-28 rounded-full bg-earth-100 border border-earth-300 flex items-center justify-center text-earth-600 mb-6 shadow-inner">
+                <i class="fa-solid fa-wine-bottle text-4xl"></i>
+              </div>
+              <blockquote class="font-serif italic text-earth-800 text-lg leading-relaxed mb-4">
+                「在杯觥交錯與微醺氛圍之間，以同理心建立長遠而真摯的信任關係。」
+              </blockquote>
+              <div class="w-12 h-0.5 bg-clay/40 rounded-full mb-3"></div>
+              <p class="text-xs uppercase tracking-widest text-earth-500 font-semibold">Hospitality & PR Philosophy</p>
+            </div>
+            <!-- Floating Stat badge -->
+            <div class="absolute -bottom-6 -right-4 sm:right-6 bg-white rounded-2xl p-4 shadow-xl border border-earth-200 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-sage-50 text-sage-700 flex items-center justify-center text-xl font-bold">
+                2+
+              </div>
+              <div>
+                <p class="text-xs text-warmgray">實務經驗</p>
+                <p class="text-sm font-bold text-charcoal">精品酒吧公關招待</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-7">
+            <div class="inline-flex items-center gap-2 text-clay font-semibold text-xs tracking-widest uppercase mb-3">
+              <i class="fa-solid fa-feather"></i>
+              <span>About Me</span>
+            </div>
+            <h2 class="font-title text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              用心感知細節，塑造有溫度的品牌共鳴
+            </h2>
+            <div class="space-y-4 text-warmgray leading-relaxed text-base">
+              <p>
+                您好，我是<strong>張雅婷 (Claire)</strong>。畢業於萬能科技大學企業管理系，擁有 2 年精緻酒吧與餐飲場域的公關招待與 VIP 客戶關係管理經驗。
+              </p>
+              <p>
+                對我而言，<strong>品酒不僅是一種生活品味，更是人際溝通與故事傳遞的絕佳媒介</strong>。在酒品文化的浸潤下，我培養了敏銳的觀察力與換位思考能力，擅長在快節奏與高互動的社交氛圍中，迅速掌握賓客需求，營造放鬆且尊榮的互動體驗。
+              </p>
+              <p>
+                結合企管背景的商業邏輯與溝通敏銳度，我善於維繫高資產與常客關係、策劃主題社交品酒體驗，並在面對突發情況時展現冷靜與優雅的應變手腕，守護品牌良好聲譽。
+              </p>
+            </div>
+
+            <!-- Core Values Pills -->
+            <div class="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-earth-200">
+              <div>
+                <span class="block text-2xl font-serif font-bold text-clay mb-1">01</span>
+                <span class="text-sm font-bold text-charcoal block">敏銳洞察</span>
+                <span class="text-xs text-warmgray">精準捕捉賓客情緒與需求</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-serif font-bold text-clay mb-1">02</span>
+                <span class="text-sm font-bold text-charcoal block">品味傳承</span>
+                <span class="text-xs text-warmgray">精緻酒款文化與氛圍引導</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-serif font-bold text-clay mb-1">03</span>
+                <span class="text-sm font-bold text-charcoal block">優雅從容</span>
+                <span class="text-xs text-warmgray">高EQ危機化解與形象守護</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-clay font-semibold text-xs tracking-widest uppercase mb-3">
+            <i class="fa-solid fa-sparkles"></i>
+            <span>Core Competencies</span>
+          </div>
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            核心專業與公關專長
+          </h2>
+          <p class="text-warmgray text-sm md:text-base">
+            融合企業管理思維與第一線款待美學，提供全方位的公關接待與客戶經營能力。
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <!-- Card 1 -->
+          <div class="glass-card rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 shadow-sm hover:shadow-md">
+            <div class="w-14 h-14 rounded-2xl bg-earth-200/80 text-earth-800 flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-champagne-glasses"></i>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3">VIP 貴賓關係維護</h3>
+            <p class="text-xs text-clay font-medium uppercase tracking-wider mb-4">VIP Client Management</p>
+            <ul class="space-y-2.5 text-sm text-warmgray leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>高階常客與 VIP 專屬檔案建立與偏好記憶</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>高黏著度顧客忠誠度經營，深耕顧客回訪率</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>個人化訂位與包場宴席需求之細緻規劃</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-card rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 shadow-sm hover:shadow-md">
+            <div class="w-14 h-14 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-wine-glass-empty"></i>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3">品酒美學與感官引導</h3>
+            <p class="text-xs text-clay font-medium uppercase tracking-wider mb-4">Wine Culture & Appreciation</p>
+            <ul class="space-y-2.5 text-sm text-warmgray leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>精選紅白酒、威士忌與調酒風味導引與解說</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>餐酒搭配（Food & Wine Pairing）美學建議</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>主題品酒之夜氣氛掌控與文化故事傳遞</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-card rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 shadow-sm hover:shadow-md">
+            <div class="w-14 h-14 rounded-2xl bg-earth-200/80 text-earth-800 flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3">公關接待與應變協調</h3>
+            <p class="text-xs text-clay font-medium uppercase tracking-wider mb-4">PR Hospitality & Crisis Handling</p>
+            <ul class="space-y-2.5 text-sm text-warmgray leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>現場客訴與突發狀況之冷靜柔性化解</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>國際商務接待禮儀與高雅應對姿態</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>維持品牌一致形象，守護網路口碑評分</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="glass-card rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 shadow-sm hover:shadow-md">
+            <div class="w-14 h-14 rounded-2xl bg-earth-200/80 text-earth-800 flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-calendar-star"></i>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3">活動策劃與跨界聯名</h3>
+            <p class="text-xs text-clay font-medium uppercase tracking-wider mb-4">Event Planning & Collaboration</p>
+            <ul class="space-y-2.5 text-sm text-warmgray leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>節慶派對、商務包場與品酒會流程統籌</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>現場動線控管、迎賓簽到與互動環節設計</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>外部品牌跨界異業合作洽談與接待安排</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="glass-card rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 shadow-sm hover:shadow-md">
+            <div class="w-14 h-14 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3">企管思維與社群行銷</h3>
+            <p class="text-xs text-clay font-medium uppercase tracking-wider mb-4">Business Mindset & Marketing</p>
+            <ul class="space-y-2.5 text-sm text-warmgray leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>消費者行為心理洞察與客單價提升策略</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>社群熱門打卡點氛圍營造與口碑行銷傳播</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>營運數據反饋與跨部門（調酒、廚房、外場）溝通</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="glass-card rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 shadow-sm hover:shadow-md">
+            <div class="w-14 h-14 rounded-2xl bg-earth-200/80 text-earth-800 flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mb-3">高情商與個人特質</h3>
+            <p class="text-xs text-clay font-medium uppercase tracking-wider mb-4">Soft Skills & Personality</p>
+            <ul class="space-y-2.5 text-sm text-warmgray leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>親和力強、具備感染力之自然談吐風格</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>高抗壓性與靈活靈動之臨場反應力</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-clay mt-1 text-xs"></i>
+                <span>嚴守客戶隱私與商業社交誠信承諾</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 bg-earth-100/50">
+      <div class="max-w-4xl mx-auto">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-clay font-semibold text-xs tracking-widest uppercase mb-3">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Experience</span>
+          </div>
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            工作實務經歷
+          </h2>
+          <p class="text-warmgray text-sm md:text-base">
+            扎根現場 2 年，以專業公關與品酒美學打造卓越的社交場域與品牌黏著度。
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative border-l-2 border-earth-300/60 ml-4 md:ml-8 pl-8 md:pl-12 space-y-12">
+          
+          <!-- Experience Item -->
+          <div class="relative">
+            <!-- Timeline dot -->
+            <div class="absolute -left-[41px] md:-left-[57px] top-1.5 w-6 h-6 rounded-full bg-clay border-4 border-earth-100 shadow-md"></div>
+            
+            <div class="glass-card rounded-3xl p-8 shadow-sm">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4 border-b border-earth-200 pb-4">
+                <div>
+                  <h3 class="text-2xl font-bold text-charcoal">酒吧公關接待專員 / VIP客戶關係專員</h3>
+                  <p class="text-clay font-medium text-base">知名特色酒吧 & 餐酒沙龍</p>
+                </div>
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-earth-200/60 text-earth-800 text-xs font-semibold w-fit">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>2 年實務經歷</span>
+                </div>
+              </div>
+
+              <div class="space-y-4 text-warmgray text-sm md:text-base leading-relaxed">
+                <div>
+                  <h4 class="font-bold text-charcoal mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-dot text-clay text-xs"></i>
+                    核心職責與具體成果：
+                  </h4>
+                  <ul class="space-y-2.5 pl-2">
+                    <li class="flex items-start gap-2">
+                      <span class="text-clay font-bold">▪</span>
+                      <span><strong>VIP 貴賓深度維繫：</strong>負責接待高端商務客群與常客，主動記錄賓客口感偏好、紀念日與特殊需求，促使常客回訪率顯著提升 30% 以上。</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-clay font-bold">▪</span>
+                      <span><strong>品酒美學引導與推廣：</strong>結合個人對品酒的熱情，向顧客深入淺出介紹各產區葡萄酒、單一麥芽威士忌與風味調酒故事，有效提高特色酒品點單率與平均客單價。</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-clay font-bold">▪</span>
+                      <span><strong>突發客訴與現場危機化解：</strong>在人潮高峰期擔任第一線溝通橋樑，化解多起賓客衝突與突發情況，以同理心與高 EQ 妥善處理，維護店家 Google Maps 4.8 顆星高口碑。</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-clay font-bold">▪</span>
+                      <span><strong>活動企劃與跨品牌聯名：</strong>協同策劃節慶主題之夜、品牌跨界品酒聚會等活動，參與現場動線規劃與主持互動，打造兼具質感的沉浸式社交氛圍。</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="pt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 rounded-lg bg-earth-100 text-earth-800 text-xs font-medium">VIP 關係管理</span>
+                  <span class="px-3 py-1 rounded-lg bg-earth-100 text-earth-800 text-xs font-medium">品酒故事行銷</span>
+                  <span class="px-3 py-1 rounded-lg bg-earth-100 text-earth-800 text-xs font-medium">危機應變處理</span>
+                  <span class="px-3 py-1 rounded-lg bg-earth-100 text-earth-800 text-xs font-medium">商務社交禮儀</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-clay font-semibold text-xs tracking-widest uppercase mb-3">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Education</span>
+          </div>
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            學歷背景與專業素養
+          </h2>
+          <p class="text-warmgray text-sm md:text-base">
+            企管學識奠定商業分析與跨部門溝通的底蘊，轉化為卓越公關實踐的基石。
+          </p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-8 md:p-10 shadow-sm border border-earth-200">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-earth-200 flex items-center justify-center text-earth-800 text-2xl font-bold">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-charcoal">萬能科技大學</h3>
+                <p class="text-clay font-medium text-base">企業管理系 學士學位</p>
+              </div>
+            </div>
+            <div class="px-4 py-1.5 rounded-full bg-sage-50 text-sage-700 text-xs font-semibold border border-sage-200">
+              Department of Business Administration
+            </div>
+          </div>
+
+          <div class="space-y-4 text-warmgray text-sm md:text-base leading-relaxed border-t border-earth-200/60 pt-6">
+            <p>
+              在學期間專注於<strong>消費者行為學、行銷管理、商務溝通與談判技巧</strong>，培養了嚴謹的市場敏銳度與組織協調力。
+            </p>
+            <div class="grid sm:grid-cols-2 gap-4 mt-4">
+              <div class="p-4 rounded-2xl bg-white/60 border border-earth-200">
+                <div class="font-bold text-charcoal text-sm mb-1 flex items-center gap-2">
+                  <i class="fa-solid fa-check-circle text-clay"></i>
+                  商務溝通與公關禮儀
+                </div>
+                <div class="text-xs text-warmgray">掌握國際商務接待禮節、溝通心理學與公共關係維護要旨。</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-white/60 border border-earth-200">
+                <div class="font-bold text-charcoal text-sm mb-1 flex items-center gap-2">
+                  <i class="fa-solid fa-check-circle text-clay"></i>
+                  行銷企劃與消費者洞察
+                </div>
+                <div class="text-xs text-warmgray">能由商業目標與顧客需求出發，設計切合市場效益之推廣方案。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Banner -->
+    <section class="py-16 px-6 bg-earth-800 text-earth-100 text-center relative overflow-hidden">
+      <div class="max-w-3xl mx-auto relative z-10">
+        <i class="fa-solid fa-quote-left text-clay text-3xl mb-4 block"></i>
+        <p class="font-serif italic text-2xl md:text-3xl leading-relaxed text-earth-50 mb-6 font-light">
+          「公關不僅是社交話術，而是一場真誠的感官共鳴。<br class="hidden sm:block">用心對待每一位賓客，成就品牌的非凡時刻。」
+        </p>
+        <span class="text-xs uppercase tracking-widest text-earth-300 font-semibold">— 張雅婷 Claire Chang</span>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-clay font-semibold text-xs tracking-widest uppercase mb-3">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Get In Touch</span>
+          </div>
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            隨時歡迎交流與合作
+          </h2>
+          <p class="text-warmgray text-sm md:text-base">
+            無論是品牌公關、VIP 接待策劃、活動主持或品酒合作，期待與您創造更多精彩可能。
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          
+          <!-- Contact Card 1 -->
+          <div class="glass-card rounded-3xl p-8 border border-earth-200 shadow-sm flex flex-col justify-between h-full">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-earth-200 flex items-center justify-center text-clay text-xl mb-6">
+                <i class="fa-solid fa-envelope-open-text"></i>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal mb-2">電子郵件聯絡</h3>
+              <p class="text-sm text-warmgray mb-6">最即時的聯繫方式，我將在收到訊息後儘速回覆您。</p>
+              
+              <div class="bg-white/80 p-4 rounded-2xl border border-earth-200 mb-6 flex items-center justify-between">
+                <span class="text-sm font-medium text-charcoal select-all">claire43900025@gmail.com</span>
+                <button onclick="copyEmail()" class="text-clay hover:text-earth-700 text-xs font-semibold px-2.5 py-1 rounded-md bg-earth-100 hover:bg-earth-200 transition-colors">
+                  複製
+                </button>
+              </div>
+            </div>
+
+            <a href="mailto:claire43900025@gmail.com" class="w-full py-3.5 rounded-full bg-clay text-white hover:bg-earth-600 font-medium text-sm transition-all shadow-md shadow-clay/20 text-center flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>直接寄送 Email</span>
+            </a>
+          </div>
+
+          <!-- Contact Card 2 -->
+          <div class="glass-card rounded-3xl p-8 border border-earth-200 shadow-sm flex flex-col justify-between h-full">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-sage-100 flex items-center justify-center text-sage-700 text-xl mb-6">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal mb-2">常駐地點與配合模式</h3>
+              <p class="text-sm text-warmgray mb-6">服務據點與彈性配合範圍：</p>
+
+              <div class="space-y-3 mb-6">
+                <div class="flex items-center gap-3 text-sm text-charcoal">
+                  <i class="fa-solid fa-location-dot text-clay w-5 text-center"></i>
+                  <span><strong>主要地區：</strong>台灣桃園市 (Taoyuan)</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-charcoal">
+                  <i class="fa-solid fa-car text-clay w-5 text-center"></i>
+                  <span><strong>可出差/配合：</strong>大台北地區、新竹及各大展會</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-charcoal">
+                  <i class="fa-solid fa-handshake-angle text-clay w-5 text-center"></i>
+                  <span><strong>合作類型：</strong>全職公關、專案接待、品酒會主持</span>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="window.print()" class="w-full py-3.5 rounded-full border border-earth-300 text-charcoal hover:bg-earth-100 font-medium text-sm transition-all text-center flex items-center justify-center gap-2">
+              <i class="fa-solid fa-print text-clay"></i>
+              <span>儲存 / 列印為 PDF 履歷</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="no-print border-t border-earth-200 bg-earth-50 py-10 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-warmgray">
+      <div class="flex items-center gap-2">
+        <span class="font-serif font-bold text-earth-800 text-sm">張雅婷 Claire Chang</span>
+        <span>•</span>
+        <span>Personal Resume Website</span>
+      </div>
+      <div>
+        設計風格：大地美學 (Warm Earth Tones Aesthetic)
+      </div>
+      <div class="text-earth-400">
+        &copy; 2026 Claire Chang. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for interactivity -->
+  <script>
+    function copyEmail() {
+      const email = 'claire43900025@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        showToast('已複製 Email: ' + email);
+      }).catch(() => {
+        showToast('Email: ' + email);
+      });
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      toastText.innerText = text;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
